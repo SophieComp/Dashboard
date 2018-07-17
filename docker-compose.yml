@@ -1,0 +1,24 @@
+version: '3.2'
+
+# ports : host:container
+services:
+  traefik:
+    image: traefik #The official Traefik docker image
+    command: --api --docker --docker.domain=mapx.localhost #Enables the web UI and tells Træfik to listen to docker
+    ports:
+      - 8585:80
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+  app:
+    build: .
+    image: fredmoser/sc-dashboard
+    restart: always
+    ports:
+      - 3838
+    hostname: sc_app
+    depends_on:
+      - traefik
+    labels:
+      - traefik.s1.frontend.rule=Host:app.dashboard.localhost
+      - traefik.s1.port=3838
+  
