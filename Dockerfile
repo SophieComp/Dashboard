@@ -3,7 +3,7 @@ FROM r-base:latest
 #
 # Sophie Comp Lancy Dashboard
 #
-MAINTAINER Fred Moser "frederic.moser@unepgrid.ch"
+MAINTAINER Fred Moser "fred@mos.re"
 
 #
 # R shiny launcher
@@ -22,7 +22,7 @@ ARG r_packages="c('shiny','rmarkdown','plotly','shinydashboard','httr','sp','lea
 
 WORKDIR /build
 #
-# SHINY SERVER
+# Install SHINY SERVER
 #
 
 RUN apt-get update \
@@ -38,7 +38,7 @@ RUN apt-get update \
       && rm -rf /var/lib/apt/lists/* 
 
 #
-# MAPX
+# Install packages
 #
 RUN apt-get update \
     && apt install -y -t unstable $r_deps_sys \
