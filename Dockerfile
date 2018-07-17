@@ -54,8 +54,7 @@ RUN apt-get update \
     && apt-get autoclean \
     && apt-get autoremove 
 
-RUN dest=${MAPX_PATH_APP}/settings/settings-local.R\
-    && echo "\
+RUN echo "\
     #!/bin/sh \n
     exec shiny-server 2>&1 " > /usr/bin/shiny-server.sh \
     && cat /usr/bin/shiny-server.sh \
