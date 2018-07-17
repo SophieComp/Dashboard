@@ -1,0 +1,49 @@
+
+.main-header .logo{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	}
+	
+.main-sidebar {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	}
+	
+.main-body{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	margin-left: 10px;
+	text-align: justify;
+	}
+
+.main-leafletOutput{
+	margin-left: 10px;
+	text-align: justify;
+	}
+
+h1 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: bold;
+	text-align: center;
+	font-size: 35px;
+}
+
+h2 {
+    text-align: justify;
+	margin-left: 10px;
+	font-size: 25px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+h3 {
+    text-align: justify;
+	margin-left: 10px;
+	font-size: 14px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+p {
+	text-align: justify;
+    margin-left: 10px;
+	font-size: 14px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
