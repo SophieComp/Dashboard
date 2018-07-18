@@ -349,7 +349,7 @@ ui<- dashboardPage(
                                           mise à jour, afin d'évaluer au mieux l'état des menaces pesant sur chaque espèce. Ci-dessous une image permet de
                                           visualiser les différentes catégories des listes rouges.", br(),
                                           tags$img(
-                                            src="red_list.png", height= 300, width=400, style="display: block; margin-left: auto; margin-right: auto;"), br(), 
+                                            src="red_list1.png", height= 300, width=400, style="display: block; margin-left: auto; margin-right: auto;"), br(), 
                                           div(style="text-align:center", #permet de centrer qu'une partie du texte
                                               "Source:", 
                                           tags$a(href="http://cmsdocs.s3.amazonaws.com/keydocuments/Categories_and_Criteria_fr_web%2Bcover%2Bbckcover.pdf", 
@@ -703,7 +703,7 @@ ui<- dashboardPage(
                                           Ces services sont primoridaux pour nous, il est donc impératif de pouvoir les évaluer
                                           afin de pouvoir au mieux les préserver.",
                                           tags$img(
-                                            src="services_eco.png", height= 600, width=650, style="display: block; margin-left: 
+                                            src="services_eco1.png", height= 600, width=650, style="display: block; margin-left: 
                                             auto; margin-right: auto;"), br(), 
                                           div(style="text-align:center", #permet de centrer qu'une partie du texte
                                               "Source:", 
