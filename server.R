@@ -55,7 +55,7 @@ Flore_data$commune<- factor(Flore_data$commune ,
                                                                             Flore_data$Pteri), decreasing = FALSE)])
 
 #Indicateur diversité des milieux:
-div_milieuGE<-readRDS("data_RDS/div_milieuGE.rds") #raster
+div_milieuGE<-raster("data_RDS/shdi.tif") #raster
 div_milieuGE1<-readRDS("data_RDS/Diversite_milieuGE.rds")
 
 dm_GIREC_Lancy<-readRDS("data_RDS/dm_GIREC_Lancy.rds")
@@ -122,7 +122,7 @@ frag_shp<-readRDS("data_RDS/frag_shp.rds")
 data_frag<-data.frame(commune= frag_shp@data$no_comm,
                       mesh= frag_shp@data$frg_rst)
 
-frag_raster<-readRDS("data_RDS/frag_raster.rds")
+frag_raster<-raster("data_RDS/frag_raster.tif")
 
 palfragGE<- colorNumeric(c("#f71b1b", "#932ef7", "#aff7f7"),domain = NULL,na.color = NA)
 
@@ -142,14 +142,14 @@ Frag_Lancy_data$commune<- factor(Frag_Lancy_data$commune,
                                                                       decreasing = FALSE)])                            
 
 #Indicateur: Pollution lumineuse
-poll_lum_Lancy<-readRDS("data_RDS/poll_lum_lancy.rds")
+poll_lum_Lancy<-raster("data_RDS/LUM_reproject1.tif")
 
 # #Indicateur: Pollution Sonore
-bruitRJ_rasterGE<-readRDS("data_RDS/bruitRJ_rasterGE.rds")
-bruitRJ_rasterLancy<-readRDS("data_RDS/bruitRJ_rasterLancy.rds")
+bruitRJ_rasterGE<-raster("data_RDS/BruitRouteJ.tif")
+bruitRJ_rasterLancy<-raster("data_RDS/bruitRJ_rasterLancy.tif")
 
-bruitRN_rasterGE<-readRDS("data_RDS/bruitRN_rasterGE.rds")
-bruitRN_rasterLancy<-readRDS("data_RDS/bruitRN_rasterLancy.rds")
+bruitRN_rasterGE<-raster("data_RDS/BruitRouteN.tif")
+bruitRN_rasterLancy<-raster("data_RDS/bruitRN_rasterLancy.tif")
 
 pal1<-colorNumeric(c("#aff7f7", "#932ef7", "#f71b1b"),domain = NULL, na.color = NA)
 
@@ -169,11 +169,11 @@ bruit_data$commune<- factor(bruit_data$commune,
 
 
 #Indicateur: Pollution agricole diffuse
-azote_tif<-readRDS("data_RDS/azote_tif.rds")
-azoteLancy<-readRDS("data_RDS/azoteLancy.rds")
+azote_tif<-raster("data_RDS/Poll_Azote1.tif")
+azoteLancy<-raster("data_RDS/azoteLancy.tif")
 
-phosphoreGE<-readRDS("data_RDS/PhosphoreGE.rds")
-phosphoreLancy<-readRDS("data_RDS/phosphoreLancy.rds")
+phosphoreGE<-raster("data_RDS/phos1.tif")
+phosphoreLancy<-raster("data_RDS/phosphoreLancy.tif")
 
 palPollAgri<-colorNumeric(c("#84e26c","#fff714", "#ed931e", "#ff14b8","#ff1414"),domain = NULL, na.color = NA)
 
@@ -195,20 +195,20 @@ imper_raster<-readRDS("data_RDS/imper_raster.rds")
 
 ###Catégorie: Bénéfices
 #Indicateur polliniation:
-pollinisateurs_abondanceGE<-readRDS("data_RDS/pollinisateurs_abondanceGE.rds")
+pollinisateurs_abondanceGE<-raster("data_RDS/abondance_poll.tif")
 
-pollinisateurs_abondanceLancy<-readRDS("data_RDS/pollinisateurs_abondanceLancy.rds")
+pollinisateurs_abondanceLancy<-raster("data_RDS/pollinisateurs_abondanceLancy.tif")
 
 palpollinisateurs_abondance<- colorNumeric(c("#45f948","#aff7f7", "#932ef7", "#f71bec","#f71b1b"),
                                        domain= NULL,
                                        na.color = NA)
-pollinisation_valeur<-readRDS("data_RDS/pollinisation_valeur.rds")
-pollinisation_valeurLancy<- readRDS("data_RDS/pollinisation_valeurLancy.rds")
+pollinisation_valeur<-raster("data_RDS/Val_eco.tif")
+pollinisation_valeurLancy<- raster("data_RDS/pollinisation_valeurLancy.tif")
 
 #Indicateur carbone:
-carboneGE<-readRDS("data_RDS/carboneGE.rds")
+carboneGE<-raster("data_RDS/carbone_2014_Resample1.tif")
 
-carboneLancy<-readRDS("data_RDS/carboneLancy.rds")
+carboneLancy<-raster("data_RDS/carboneLancy.tif")
 
 palcarbone<- colorNumeric(c("#84e26c","#fff714", "#ed931e", "#ff14b8","#ff1414"),
                       domain = NULL,
