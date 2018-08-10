@@ -9,7 +9,7 @@ MAINTAINER Fred Moser "fred@mos.re"
 #
 # R shiny launcher
 #
-ENV R_BASE_VERSION 3.5.0
+ENV R_BASE_VERSION 3.5.1
 ENV LC_ALL=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 ENV SHINY_PORT=3838
@@ -18,7 +18,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ARG r_deps_dev="r-base-dev="${R_BASE_VERSION}-*
 ARG r_deps_sys="libgeos-dev libgdal-dev libgeo-proj4-perl libssl-dev"
 ARG r_deps_shiny_server="sudo gdebi-core pandoc pandoc-citeproc libcairo2-dev/unstable libxt-dev"
-ARG r_packages_date="2018-05-02"
+ARG r_packages_date="2018-07-19"
 ARG r_packages="c('shiny','rmarkdown','plotly','shinydashboard','httr','sp','leaflet','raster','rgdal','rgeos')"
 
 WORKDIR /build
