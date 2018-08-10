@@ -3,6 +3,7 @@ FROM r-base:latest
 #
 # Sophie Comp Lancy Dashboard
 #
+
 MAINTAINER Fred Moser "fred@mos.re"
 
 #
@@ -21,9 +22,8 @@ ARG r_packages_date="2018-05-02"
 ARG r_packages="c('shiny','rmarkdown','plotly','shinydashboard','httr','sp','leaflet','raster','rgdal','rgeos')"
 
 WORKDIR /build
-#
+
 # Install SHINY SERVER
-#
 
 RUN apt-get update \
       && set -e \
@@ -38,7 +38,9 @@ RUN apt-get update \
       && rm -rf /var/lib/apt/lists/* 
 
 #
+
 # Install packages
+
 #
 RUN apt-get update \
     && apt install -y -t unstable $r_deps_sys \
@@ -53,6 +55,7 @@ RUN apt-get update \
     && apt-get clean \
     && apt-get autoclean \
     && apt-get autoremove 
+
 
 RUN echo "\
     #!/bin/sh \n
