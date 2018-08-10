@@ -3,7 +3,8 @@ FROM r-base:latest
 #
 # Sophie Comp Lancy Dashboard
 #
-MAINTAINER Fred Moser "frederic.moser@unepgrid.ch"
+
+MAINTAINER Fred Moser "fred@mos.re"
 
 #
 # R shiny launcher
@@ -21,9 +22,8 @@ ARG r_packages_date="2018-05-02"
 ARG r_packages="c('shiny','rmarkdown','plotly','shinydashboard','httr','sp','leaflet','raster','rgdal','rgeos')"
 
 WORKDIR /build
-#
-# SHINY SERVER
-#
+
+# Install SHINY SERVER
 
 RUN apt-get update \
       && set -e \
@@ -38,7 +38,9 @@ RUN apt-get update \
       && rm -rf /var/lib/apt/lists/* 
 
 #
-# MAPX
+
+# Install packages
+
 #
 RUN apt-get update \
     && apt install -y -t unstable $r_deps_sys \
@@ -54,8 +56,8 @@ RUN apt-get update \
     && apt-get autoclean \
     && apt-get autoremove 
 
-RUN dest=${MAPX_PATH_APP}/settings/settings-local.R\
-    && echo "\
+
+RUN echo "\
     #!/bin/sh \n
     exec shiny-server 2>&1 " > /usr/bin/shiny-server.sh \
     && cat /usr/bin/shiny-server.sh \

@@ -3,8 +3,8 @@ version: '3.2'
 # ports : host:container
 services:
   traefik:
-    image: traefik #The official Traefik docker image
-    command: --api --docker --docker.domain=mapx.localhost #Enables the web UI and tells Træfik to listen to docker
+    image: traefik
+    command: --api --docker --docker.domain=dashboard.localhost
     ports:
       - 8585:80
     volumes:
