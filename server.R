@@ -757,11 +757,11 @@ server<- function(input, output, session){
   })
   
   output$carboneBoxplotGE<- renderPlot({
-    boxplot(carboneBoxplot, xlab="Canton", ylab="Valeurs", ylim= c(0, 0.68), col='#035fa5')
+    boxplot(carboneGE, xlab="Canton", ylab="Valeurs", ylim= c(0, 0.68), col='#035fa5')
   })
   
   output$carboneBoxplotLancy<- renderPlot({
-    boxplot(carboneBoxplotLancy, xlab="Lancy", ylab="Valeurs", ylim= c(0, 0.68), col='#a50101')
+    boxplot(carboneLancy, xlab="Lancy", ylab="Valeurs", ylim= c(0, 0.68), col='#a50101')
   })
 
   ###Catégorie: Résultats:
@@ -986,7 +986,7 @@ server<- function(input, output, session){
             )
     })
   output$resultats1 <- renderInfoBox({
-    infoBox("Résultats",
+    infoBox("Mesures",
             a("cliquer ici", onclick = "openTab('presentation_resultats')", target="_blank"),
             tags$script(HTML("
                              var openTab = function(tabName){
