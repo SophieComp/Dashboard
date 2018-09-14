@@ -226,7 +226,7 @@ carboneBoxplotLancy<-readRDS("data_RDS/Carbone_BoxplotLancy.rds")
 EP_Lancy_Graphe<-readRDS("data_RDS/EP_Lancy_Graphe.rds")
 EP_Canton_Graphe<-readRDS("data_RDS/EP_Canton_Graphe.rds")
 
-EP_Canton_Pourcentage<-readRDS("data_RDS/EP_Canton_Pourcentage.rds")
+EP_Canton_Pourcentage<-read.csv("data_RDS/Esp_Prot_Communes1.csv", ";", header=T)
 data_EP<-data.frame(
   commune= EP_Canton_Pourcentage$Row.Labels,
   pourcentage= EP_Canton_Pourcentage$Pourcentage)
