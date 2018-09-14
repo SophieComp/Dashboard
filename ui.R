@@ -45,7 +45,7 @@ ui<- dashboardPage(
                                      menuSubItem(text = "Présentation", tabName = "presentation_benefit"),
                                      menuSubItem(text = "Pollinisation",tabName = "ind_pollinisation"),
                                      menuSubItem(text= "Carbone", tabName = "ind_carbone")),
-                            menuItem("Résultats", tabName = "resultats", icon = icon("trophy"),
+                            menuItem("Mesures", tabName = "resultats", icon = icon("trophy"),
                                      menuSubItem(text = "Présentation", tabName = "presentation_resultats"),
                                      menuSubItem(text = "Espaces protégés",tabName = "ind_protege"),
                                      menuSubItem(text = "Surfaces de promotion de la biodiversité", tabName = "ind_compensation"),
