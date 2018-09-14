@@ -65,7 +65,8 @@ ui<- dashboardPage(
                         et qu'est-ce qui les fait disparaître?... Toutes ces questions concernent la biodiversité, mais il est souvent difficile
                         d'y trouver des réponses simples et claires. C'est pourquoi, de manière générale, il semble que la population manque
                         d'informations lui permettant de comprendre et de connaître ce qu'est la biodiversité et son évolution. Dans cette optique,
-                        ce site vise à permettre aux lancéans et aux autorités de pouvoir se renseigner sur l'état de la biodiversité dans 
+                        ce site, réalisé dans le cadre d’un travail de master à l’Université de Genève, est un exercice offrant 
+                        la possibilité aux lancéans et aux autorités de se renseigner sur l'état de la biodiversité dans 
                         la commune et de comprendre l'enjeu derrière le problème de l'appauvrissement de la biodiveristé. Il s'agit donc à la fois d'un outil
                         de sensibilisation sur cette thématique et en même temps un instrument d'aide à la décision afin que les autorités aient
                        une information utile et à jour pour qu'ils prennent en considération, dans leurs décisions, la biodiversité et ses enjeux."),
