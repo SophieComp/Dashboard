@@ -833,7 +833,7 @@ ui<- dashboardPage(
                           align= "center"),
                   ###Résultats###
                   tabItem(tabName = "presentation_resultats", 
-                          fluidRow(box(title= h2("Catégorie: Résultats des mesures pour la biodiversité"), status= "danger",  
+                          fluidRow(box(title= h2("Catégorie: Mesures pour la biodiversité"), status= "danger",  
                                        h3("La dernière catégorie choisie est les mesures prises en faveur de la biodiversité.
                                           En effet, il est primordial de pouvoir évaluer les résultats des mesures prises en faveur de la biodiversité,
                                           car le biodiversité se dégrade de plus en plus, de ce fait il est important de 
